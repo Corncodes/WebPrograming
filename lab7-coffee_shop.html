@@ -4,8 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Java Haven</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      background-color: #f5e1c8; 
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header { grid-area: header; }
+    .nav { grid-area: nav; }
+    .main-content { grid-area: main; }
+    .footer { grid-area: footer; }
+
+    .header {
+      background-color: #4b2e1e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .nav {
+      background-color: #8c5a3a;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .main-content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header,h1 {
+      color: #f5e1c8;
+    }
+
+    h2 {
+      color: #4b2e1e; 
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .flex-item {
+      padding: 10px;
+      background-color: #c49a6c;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      min-width: 100px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #4b2e1e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="header">
     <h1>Java Haven</h1>
